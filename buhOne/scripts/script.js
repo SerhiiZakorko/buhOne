@@ -20,6 +20,7 @@ function renderBanner(){
     for(let i = 0; i < banners.length; i++){
         positionWrapper.innerHTML += `<div class='round' id='round${i}'></div>`
     }
+    bannerWrapper2.style.width = `${banners.length * 100}%`
 }
 
 
