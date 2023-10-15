@@ -38,16 +38,23 @@ nav a {
     text-transform: uppercase;
     text-decoration: none;
 }
+.banner-wrapper1{
+    position: relative;
+}
 
-.banner-wrapper{
+
+.banner-wrapper2{
     display: flex;
     width: 400%;
+    position: absolute;
+    left: 0%;
+    transition: left 0.5s ease;
 }
 
 .banner{
     background-image: url('../imgs/banner.svg');
     background-size: cover;
-    width: 100%;
+    width: 100vw;
 }
 
 .banner-content{
@@ -80,6 +87,11 @@ padding: 170px 20% 113px 20%;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
+    position: absolute;
+    z-index: 2;
+    width: 60%;
+    bottom: -550px;
+    left: 20%;
 }
 
 .position-wrapper{
@@ -93,13 +105,18 @@ padding: 170px 20% 113px 20%;
     height: 10px;
     border-radius: 50%;
     background-color: var(--White);
-    opacity: 40%;
+    
+}
+
+.round:not(:first-child){
+    opacity: 30%;
 }
 
 .nav-buttons button{
     width: 60px;
     height: 60px;
     margin: 0;
+    border: none;
     background-color: #ffffff40;
 }
 
