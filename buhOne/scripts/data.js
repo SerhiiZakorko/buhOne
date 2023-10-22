@@ -16,3 +16,32 @@ export const banners = [
         buttonText: 'Показать больше'
     }
 ]
+
+export const ourServices = ['Бухгалтерское обслуживание', 'Бухгалтерское обслуживание', 'Бухгалтерское обслуживание', 'Бухгалтерское обслуживание', 'Бухгалтерское обслуживание', 'Бухгалтерское обслуживание']
+
+export const aboutAchievements = [
+    {
+        count: 90,
+        title: 'Завершено крупных сделок',
+        button: 'Все кейсы'
+    },
+    {
+        count: 90,
+        title: 'Завершено крупных сделок',
+        button: 'Все кейсы'
+    },
+    {
+        count: 90,
+        title: 'Завершено крупных сделок',
+        button: 'Все кейсы'
+    },
+    {
+        count: 90,
+        title: 'Завершено крупных сделок',
+        button: 'Все кейсы'
+    }
+]
+
+export const ourClients = [
+    "../imgs/microsoft.svg","../imgs/microsoft.svg","../imgs/microsoft.svg","../imgs/microsoft.svg"
+]

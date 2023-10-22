@@ -5,23 +5,23 @@
 }
 :root{
     --Text-color: #222;
+    --DarkText-color: #333;
     --Accent: #005FA3;
     --White: #FFF;
+    --Gray: #EBEBEB;
+    --DarkGrey: #BDBDBD;
 }
-
 header{
     padding: 33px 20% 46px 20%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .logo-wrapper{
     display: flex;
     align-items: center;
     gap: 1.5vw;
 }
-
 nav ul{
     display: flex;
     gap: 3.5vw;
@@ -40,36 +40,35 @@ nav a {
 }
 .banner-wrapper1{
     position: relative;
+    height: 678px;
+    width: 100%;
+    overflow: hidden;
 }
-
-
 .banner-wrapper2{
-    display: flex;
-    width: 400%;
+    display: grid;
+    grid-auto-flow: column;
     position: absolute;
-    left: 0%;
+    margin-left: 0vw;
     transition: left 0.5s ease;
 }
-
 .banner{
     background-image: url('../imgs/banner.svg');
     background-size: cover;
+    background-position: center;
     width: 100vw;
+    max-height: 678px;
 }
-
 .banner-content{
 padding: 170px 20% 113px 20%;
 }
-
 .banner h2{
     width: 58%;
     color: #FFF;
     font-family: 'Merriweather', serif;
     font-size: 48px;
     font-weight: 700;
-    line-height: 138.27%; /* 66.37px */
+    line-height: 138.27%;
 }
-
 .banner button{
     margin: 80px auto 120px 0;
     padding: 19px 7%;
@@ -80,49 +79,206 @@ padding: 170px 20% 113px 20%;
     font-family: 'Lato', sans-serif;
     font-size: 18px;
     font-weight: 400;
-    line-height: 138%; /* 24.84px */
+    line-height: 138%;
 }
-
-.navigation-wrapper{
+.navigation-wrapper1{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     position: absolute;
     z-index: 2;
     width: 60%;
-    bottom: -550px;
+    bottom: 130px;
     left: 20%;
 }
-
-.position-wrapper{
+.position-wrapper1, .position-wrapper2 {
     display: flex;
     width: 50%;
     gap: 9%;
 }
-
-.round{
+.services-round, .clients-round{
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: var(--White);
-    
 }
-
-.round:not(:first-child){
+.services-round:not(:first-child), .clients-round:not(:first-child){
     opacity: 30%;
 }
-
 .nav-buttons button{
     width: 60px;
     height: 60px;
     margin: 0;
     border: none;
     background-color: #ffffff40;
+    opacity: 30%;
+    transition: 250ms;
 }
-
+.nav-buttons button:hover{
+    opacity: 50%;
+}
 .nav-buttons img{
     width: 15px;
     height: 15px;
     color: var(--Text-color);
     opacity: 100%;
+}
+.our-services{
+    background-color: var(--Gray);
+    padding: 140px 20%;
+}
+.our-services h3, .about-us h3, .our-clients h3{
+    color: var(--DarkGrey);
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 138%;
+}
+.our-services h2, .about-us h2, .our-clients h2{
+    margin-top: 40px;
+    color: var(--DarkText-color);
+    font-family: 'Merriweather', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 144.555%;
+}
+.services-wrapper{
+    margin-top: 102px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.service-card{
+    margin: auto;
+    background-image: url('../imgs/service-card-bg.svg');
+    max-width: 350px;
+    min-height: 360px;
+    display: flex;
+    align-items: end;
+    transition: 250ms;
+}
+.service-card h3{
+    margin-left: 45px;
+    margin-bottom: 45px;
+    color: var(--White);
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 126%;
+}
+.service-card:hover{
+    background: linear-gradient(0deg, rgba(0, 95, 163, 0.65) 0%, rgba(0, 95, 163, 0.65) 100%), url('../imgs/service-card-bg.svg'), lightgray 50% / cover no-repeat;;
+}
+.about-us{
+    background-color: var(--White);
+    padding: 140px 20%;
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    gap: 9%;
+}
+.about-us .ivanov{
+    color: var(--Accent);
+    margin-top: 0;
+}
+.about-us p{
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 138%;
+    margin-top: 60px;
+}
+.about-achievements{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+.achievement-card{
+    background-color: var(--Gray);
+    padding: 40px;
+    min-width: 13.5vw;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 250ms;
+}
+.achievement-card h3{
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 5.5px;
+    text-transform: uppercase;
+}
+.achievement-card p{
+    margin: 30px auto auto 0;
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 132%;
+}
+.achievement-card a{
+    color: var(--Accent);
+    font-family: 'Lato' sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration-line: underline;
+}
+.achievement-card:hover{
+    background-color: var(--Accent);
+}
+.achievement-card:hover h3,.achievement-card:hover p, .achievement-card:hover a{
+    color: var(--White);
+}
+.our-clients{
+    background-color: var(--Gray);
+    padding: 100px 20% 0 20%;
+    max-height: 700px;
+}
+.clients-wrapper1{
+    position: relative;
+    height: 465px;
+    width: 100%;
+    overflow: hidden;
+}
+.clients-wrapper2{
+    display: grid;
+    grid-auto-flow: column;
+    position: relative;
+    margin-left: 0vw;
+    transition: left 0.5s ease; 
+}
+.client-banner{
+    display: flex;
+    justify-content: center;
+    margin: 80px auto;
+    width: 60vw;
+    max-height: 130px;
+}
+.navigation-wrapper2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: absolute;
+    z-index: 2;
+    width: 60%;
+    bottom: -2700px;
+    left: 20%;
+}
+.navigation-wrapper2 button{
+    background-color: var(--Accent);
+    opacity: 20%;
+}
+.navigation-wrapper2 button:hover{
+    opacity: 100%;
+}
+.clients-round{
+    background-color: var(--Accent);
+}
+.ppp{
+    background-color: aqua;
+    height: 100px;
 }
