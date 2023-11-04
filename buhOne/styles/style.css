@@ -11,6 +11,8 @@
     --Gray: #EBEBEB;
     --DarkGrey: #BDBDBD;
 }
+
+                        /* Header */
 header{
     padding: 33px 20% 46px 20%;
     display: flex;
@@ -38,6 +40,8 @@ nav a {
     text-transform: uppercase;
     text-decoration: none;
 }
+
+                        /* Баннер об услугах */
 .banner-wrapper1{
     position: relative;
     height: 678px;
@@ -91,18 +95,18 @@ padding: 170px 20% 113px 20%;
     bottom: 130px;
     left: 20%;
 }
-.position-wrapper1, .position-wrapper2 {
+.banner-position-wrapper, .clients-position-wrapper, .reviews-position-wrapper {
     display: flex;
     width: 50%;
     gap: 9%;
 }
-.services-round, .clients-round{
+.servicesRound, .clientsRound, .reviewsRound{
     width: 10px;
     height: 10px;
     border-radius: 50%;
     background-color: var(--White);
 }
-.services-round:not(:first-child), .clients-round:not(:first-child){
+.servicesRound:not(:first-child), .clientsRound:not(:first-child), .reviewsRound:not(:first-child){
     opacity: 30%;
 }
 .nav-buttons button{
@@ -123,18 +127,20 @@ padding: 170px 20% 113px 20%;
     color: var(--Text-color);
     opacity: 100%;
 }
+
+                                /* Наши услуги */
 .our-services{
     background-color: var(--Gray);
     padding: 140px 20%;
 }
-.our-services h3, .about-us h3, .our-clients h3{
+.our-services h3, .about-us h3, .our-clients h3, .reviews h3{
     color: var(--DarkGrey);
     font-family: 'Lato', sans-serif;
     font-size: 24px;
     font-weight: 900;
     line-height: 138%;
 }
-.our-services h2, .about-us h2, .our-clients h2{
+.our-services h2, .about-us h2, .our-clients h2, .reviews h2 {
     margin-top: 40px;
     color: var(--DarkText-color);
     font-family: 'Merriweather', sans-serif;
@@ -152,6 +158,7 @@ padding: 170px 20% 113px 20%;
     margin: auto;
     background-image: url('../imgs/service-card-bg.svg');
     max-width: 350px;
+    min-width: 18.2vw;
     min-height: 360px;
     display: flex;
     align-items: end;
@@ -169,6 +176,9 @@ padding: 170px 20% 113px 20%;
 .service-card:hover{
     background: linear-gradient(0deg, rgba(0, 95, 163, 0.65) 0%, rgba(0, 95, 163, 0.65) 100%), url('../imgs/service-card-bg.svg'), lightgray 50% / cover no-repeat;;
 }
+
+
+                                /* О нас */
 .about-us{
     background-color: var(--White);
     padding: 140px 20%;
@@ -233,6 +243,9 @@ padding: 170px 20% 113px 20%;
 .achievement-card:hover h3,.achievement-card:hover p, .achievement-card:hover a{
     color: var(--White);
 }
+
+
+                                /* Наши клиенты */
 .our-clients{
     background-color: var(--Gray);
     padding: 100px 20% 0 20%;
@@ -240,7 +253,7 @@ padding: 170px 20% 113px 20%;
 }
 .clients-wrapper1{
     position: relative;
-    height: 465px;
+    height: 450px;
     width: 100%;
     overflow: hidden;
 }
@@ -254,31 +267,187 @@ padding: 170px 20% 113px 20%;
 .client-banner{
     display: flex;
     justify-content: center;
-    margin: 80px auto;
+    margin: 80px auto 50px auto;
     width: 60vw;
-    max-height: 130px;
+    min-height: 130px;
 }
 .navigation-wrapper2{
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    position: absolute;
-    z-index: 2;
-    width: 60%;
-    bottom: -2700px;
-    left: 20%;
+    margin-right: 0;
 }
-.navigation-wrapper2 button{
+.navigation-wrapper2 button, .navigation-wrapper3 button{
     background-color: var(--Accent);
     opacity: 20%;
 }
-.navigation-wrapper2 button:hover{
+.navigation-wrapper2 button:hover, .navigation-wrapper3 button:hover{
     opacity: 100%;
 }
-.clients-round{
+.clientsRound, .reviewsRound{
     background-color: var(--Accent);
 }
-.ppp{
-    background-color: aqua;
-    height: 100px;
+
+
+                                /* Отзывы */
+.reviews{
+    min-height: 400px;
+    background-color: var(--White);
+    padding: 140px 20%;
+}
+.reviews-wrapper1{
+    position: relative;
+    min-height: 400px;
+    width: 100%;
+    overflow: hidden;
+}
+.reviews-wrapper2{
+    display: grid;
+    grid-auto-flow: column;
+    position: relative;
+    margin-left: 0vw;
+    transition: left 0.5s ease; 
+}
+.review-banner{
+    margin: 80px auto 50px auto;
+    width: 60vw;
+    min-height: 320px;
+    background-color: var(--Gray);
+    padding: 45px 8.3%;
+}
+.review-banner p{
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 138%;
+}
+.review-author{
+    display: flex;
+    margin: 58px auto 0 0;
+    gap: 3%;
+}
+.review-author img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.review-author h4{
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 138%;
+}
+.review-author h5{
+    margin-top: 10px;
+    color: #4f4f4f;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 138%;
+}
+.navigation-wrapper3{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: 0;
+}
+
+
+/*Footer*/
+
+.footer-wrapper{
+    background-image: url('../imgs/bg-footer.svg');
+    background-size: cover;
+}
+footer .content-wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 8.7%;
+    padding: 122px 20% 140px 20%;
+}
+footer h2{
+    color: var(--White);
+    font-family: 'Merriweather', sans-serif;
+    font-size: 48px;
+    font-weight: 900;
+    line-height: 144.555%;
+}
+footer p{
+    margin: 60px 0 80px 0;
+    color: var(--White);
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 138%;
+}
+.contacts-footer, .phone-wrapper, .mail-wrapper{
+    display: flex;
+}
+.contacts-footer{
+    gap: 40px;
+}
+.phone-wrapper p, .mail-wrapper p{
+    margin: auto auto auto 15.5px;
+}
+form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 30px;
+    row-gap: 35px;
+    margin-top: 20px;
+}
+.contact-message{
+    grid-column: 1/3;
+}
+.form-wrapper h3{
+    color: var(--White);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 138%;
+}
+input, textarea{
+    width: 100%;
+    padding: 15px 0;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--White);
+}
+::placeholder{
+    color: var(--DarkGrey);
+    font-family: 'Lato', sans-serif;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 138%;
+}
+.footer-button-wrapper{
+    display: flex;
+}
+.form-wrapper button{
+    margin: 50px 0 0 auto;
+    padding: 19px 45px;
+    background-color: var(--Accent);
+    border: none;
+    color: var(--White, #FFF);
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 138%;
+}
+.copyright{
+    padding: 50px 20% 40px 20%;
+    display: flex;
+    justify-content: space-between;
+
+}
+.copyright p{
+    color: #000;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 138%;
+    margin: 0;
 }
